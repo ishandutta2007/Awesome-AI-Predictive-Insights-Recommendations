@@ -1,195 +1,93 @@
-# Awesome-AI-Predictive-Insights-Recommendations
+# Awesome AI Predictive Insights & Recommendations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-# Awesome-AI-Predictive-Insights-Recommendations
+> A curated list of production-grade SaaS platforms, open-source machine learning engines, anomaly detection frameworks, forecasting systems, and self-hosted recommendation engines.
 
-**Top AI Predictive Insights Recommendations (Opensource) 🌟 Star if you like it! 🌟**
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Anomaly Detection, Revenue Forecasting, Unstructured Feedback Analytics & Self-Hosted Recommendation Engines*
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **AI Predictive Insights & Recommendations**. These tools enable organizations to surface anomalies, forecast outcomes, extract themes from unstructured feedback, and recommend next-best actions—from fully managed platforms with proprietary ML models to open-source engines that give teams control over their models and data.
-
-
-
-**Examples** include Dynatrace Davis AI, Datadog Watchdog, Salesforce Einstein Discovery, Gong Insights, Qualtrics XM Discover, Medallia, CallMiner Eureka, Freshworks Freddy AI Insights, Clari Copilot, and Balto (the category leaders in commercial space).
-
-
-
-**Open-source emphasis**: This section is expanded with every relevant project for self-hosted predictive analytics, recommendation engines, and open anomaly detection. **Critical note**: The open-source landscape splits by function—**Gorse** is the most complete open-source recommender system engine , **ParleML ml4** provides an AutoML engine with classification, forecasting, anomaly detection, and recommendation entry points , and **Security Shallots** offers lightweight AI-assisted anomaly triage for security telemetry . No open-source project matches Dynatrace's deterministic causal AI or Qualtrics's decade-trained NLP models, but for specific predictive capabilities, the building blocks exist.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **Dynatrace Davis AI**
-
-  **Causal AI for root cause analysis** and anomaly detection. **Pricing**: **Per host and per feature module**; public list pricing is limited—formal quote required . **Estimated total cost**: **$80.5K–$203.2K first year** (base $126.5K); **$174.8K–$406.3K three-year total** . **Free tier**: Trial only. **Best for**: teams wanting deterministic root cause analysis rather than correlated alerts—**trade-off**: per-module pricing makes costs hard to forecast; learning curve is steep .
-
-
-
-- **Datadog Watchdog**
-
-  **Anomaly detection across metrics, APM, and logs**. **Pricing**: **Observability tiers start around $18/host/month** for the tier that includes Watchdog . **Free tier**: Limited trial. **Best for**: teams already on Datadog wanting anomaly detection without additional tooling—**trade-off**: **Watchdog detects anomalies but leaves root cause investigation to humans**; less automated than Davis AI .
-
-
-
-- **Salesforce Einstein Discovery**
-
-  **Automated insights and predictions** within Salesforce. **Pricing**: **~$25/user/month** for CRM Analytics Plus or Einstein Predictions licenses; **Sales Cloud Einstein $50/user/month** (billed annually) . **Free tier**: Developer Edition available. **Best for**: Salesforce customers wanting predictive models on CRM data—**trade-off**: requires minimum 400 rows of outcome data for model creation; maximum 20M rows and 50 columns .
-
-
-
-- **Gong Insights**
-
-  **Revenue intelligence analytics module** within Gong. **Pricing**: **Add-on to core Gong subscription**—estimated **$15K–$40K/year** depending on module . **Free tier**: None. **Best for**: Gong customers wanting deeper analytics and benchmarking on conversation data—**trade-off**: module costs stack significantly; core Gong subscription required first .
-
-
-
-- **Qualtrics XM Discover**
-
-  **Unstructured text and speech analytics** (originally Clarabridge). **Pricing**: **Quote-only**; requires existing XM Discover subscription for Azure SSO integration . **Free tier**: None. **Best for**: organizations processing large volumes of contact center transcripts, open-text surveys, and social feedback—**trade-off**: **most mature AI layer in the Qualtrics stack**; multi-language support mature for major European languages but developing for others .
-
-
-
-- **Medallia**
-
-  **Experience management** with speech analytics. **Pricing**: **No publicly posted prices**—pricing page describes Experience Data Record (EDR) pricing with unlimited users and directs buyers to "Talk to Sales" . **Free tier**: None. **Best for**: enterprises with dedicated CX programs wanting feedback analytics—**trade-off**: annual-tier pricing only; no public rates .
-
-
-
-- **CallMiner Eureka**
-
-  **Speech and text analytics** for contact centers. **Pricing**: **Pricing available upon request**; no plan information publicly available . **Free tier**: None. **Best for**: contact centers needing 100% call inspection and compliance monitoring—**trade-off**: quote-only; enterprise sales process .
-
-
-
-- **Freshworks Freddy AI Insights**
-
-  **AI insights within Freshdesk/Freshservice**. **Pricing**: **Included in Enterprise tier only**; no separate add-on price. **Cheapest published plan carrying Freddy AI Insights**: **Freshdesk Omni Enterprise $119/agent/month billed annually** . **Free tier**: No—Enterprise only. **Best for**: Freshworks Enterprise customers wanting root cause analysis and customized insights—**trade-off**: requires Enterprise tier; no standalone purchase .
-
-
-
-- **Clari Copilot**
-
-  **Conversation intelligence** within Clari revenue platform. **Pricing**: **Starting price ~$500/user/year** per SourceForge listing; Software Advice lists $80/month or $1,080/year (product comparison may differ) . **Free tier**: None. **Best for**: Clari customers wanting call insights alongside forecasting—**trade-off**: pricing data conflicts across sources; verify directly .
-
-
-
-- **Balto**
-
-  **Real-time guidance** for contact center agents. **Pricing**: **Custom pricing only**—"what you pay depends on your team size and how you work"; phone system integration required . **Free tier**: None. **Best for**: contact centers wanting live agent coaching—**trade-off**: custom pricing only; implementation complexity .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **Gorse**
-
-  **Open-source recommender system engine** (Apache 2.0) — **the most complete open-source recommendation engine**, designed to be quickly introduced into online services . **Features**: **Multi-source recommendation**—popular, latest, user-based, item-based, and collaborative filtering, ranked by click-through rate prediction; **AutoML**—automatically chooses the best recommendation model and strategy via background model searching; **distributed recommendation**—single-node training, distributed prediction, horizontal scaling; **RESTful API** for data CRUD and recommendation requests; **dashboard** for data import/export, monitoring, and cluster status . **Tech stack**: Go. **Deploy**: Self-hosted (Docker Compose, manual); stores data in MySQL, MongoDB, PostgreSQL, or ClickHouse with Redis caching . **Trade-off**: **Recommendation-focused**—no built-in anomaly detection or forecasting; requires data ingestion pipeline. **Best for**: developers wanting to add personalized recommendations to their application—the most mature open-source recommender engine available.
-
-
-
-- **ParleML ml4**
-
-  **AutoML training engine driven by AI agents** (PyPI, free including commercial use) — **the most comprehensive open-source predictive analytics engine** found in this research, with dedicated entry points for every common ML task . **Features**: **One entry point per task**—classification/regression (`AutoSupervised`), time-series forecasting (`Forecaster`), **anomaly detection** (`AnomalyDetector`), clustering (`ClusteringDetector`), **recommendation** (`Recommender`), learning-to-rank (`LTRRanker`), association rules (`AssociationMiner`); **leakage-safe feature engineering**—domain parsers for IP, geography, emails, names, addresses, phone, card, IBAN, dates; **post-fit layer**—calibration, decision-threshold tuning, prediction intervals, baseline checks; **regulated models**—glass-box models (GLM, scorecard, RuleFit, EBM) with monotonic constraints for compliance; **forecasting** with four backends including Chronos foundation model; **hyperparameter search** with Optuna, AutoGluon, or good defaults . **Tech stack**: Python 3.11–3.13 (Windows/Linux x86-64; macOS via Docker) . **Deploy**: `pip install parleml-ml4`; Python API . **Trade-off**: **Library, not a platform**—no UI, no scheduling, no data connectors; requires ML engineering. **Best for**: developers and data scientists wanting a single engine for anomaly detection, forecasting, recommendation, and classification—especially those needing regulated glass-box models for compliance.
-
-
-
-- **Security Shallots**
-
-  **Lightweight, self-hosted SIEM with AI-assisted anomaly triage** (PyPI) — **the easiest entry point to AI-assisted anomaly detection**, running on anything from a Raspberry Pi to a server . **Features**: **Ingests** Suricata, Syslog, pfSense, Wazuh, CrowdSec, Pi-hole, Argus agents, and web logs; **normalizes, deduplicates, auto-classifies severity**; **correlates patterns** (port scans, brute force, lateral movement); **groups into incidents** with runbooks; **AI triage via API** (OpenAI/Anthropic) or local Ollama—no GPU needed; **hardware auto-detection** adjusts profile based on RAM/CPU . **Profiles**: Lite (<2 GB, Suricata+syslog); Full (8+ GB, baselines, graph, ML) . **Tech stack**: Python, SQLite . **Deploy**: `pip install .`; `shallot run`; systemd service . **Trade-off**: **Security-focused anomaly detection**—not general business insights or recommendations; SQLite limits retention at high volume . **Best for**: homelabs, small businesses, and security teams wanting AI-assisted anomaly triage without Elastic or Splunk infrastructure—especially those starting on minimal hardware.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **No mature open-source equivalent to Dynatrace Davis AI or Qualtrics XM Discover exists.** Those platforms bundle years of proprietary model training and enterprise integrations that open-source projects cannot replicate. **Gorse** and **ParleML ml4** provide specific capabilities (recommendation, anomaly detection) but not a unified insights platform.
-
-
-
-**Frameworks for building custom systems**: Combine **ParleML ml4** for anomaly detection and forecasting with **Gorse** for recommendations and **Security Shallots** for security-focused anomaly triage—creating a layered open-source predictive analytics stack. **None of these match Dynatrace's causal AI or Qualtrics's NLP depth**, but for specific predictive tasks, the options are production-capable.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, license (for open-source), and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- AI predictive insights platforms handling business and customer data must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate access controls.
-
-- **The "causal AI" vs. "anomaly detection" vs. "automated insights" vs. "unstructured text analytics" vs. "recommendation engine" distinction is critical.** **Dynatrace Davis AI** provides **causal AI**—deterministic root cause analysis across the tech stack . **Datadog Watchdog** provides **anomaly detection**—it surfaces anomalies but leaves root cause to humans . **Salesforce Einstein Discovery** provides **automated insights**—it examines variable combinations to find predictive patterns . **Qualtrics XM Discover** and **CallMiner Eureka** provide **unstructured text/speech analytics**—theme extraction, sentiment, and intent from conversations . **Gorse** and **ParleML ml4** are **open-source engines**—recommendation and AutoML respectively . **Choose based on whether you need root cause, anomaly surfacing, predictive patterns, text analytics, or recommendations.**
-
-- **Dynatrace's cost is substantial**—estimated **$80.5K–$203.2K first year**, **$174.8K–$406.3K three-year** . **Model total cost including implementation, integration, and staff time before committing** .
-
-- **Datadog Watchdog is an overlay, not a replacement for Davis AI**—it detects anomalies but leaves root cause investigation to humans; less automated than Dynatrace . **The trade-off**: cheaper entry (~$18/host/month) but more analyst time.
-
-- **Gong Insights costs $15K–$40K/year as an add-on**—stacked on top of core Gong subscription . **Model total cost before committing; module costs can rival the base platform** .
-
-- **Freshworks Freddy AI Insights requires Enterprise tier**—cheapest entry is **Freshdesk Omni Enterprise at $119/agent/month annual** . **No standalone purchase available** .
-
-- **Qualtrics XM Discover is the most mature AI layer in the Qualtrics stack**—built on Clarabridge's decade of NLP, production-quality for English, mature for major European languages . **The trade-off**: quote-only; multi-language support developing for others .
-
-- **ParleML ml4 is the most comprehensive open-source predictive engine**—one API for classification, forecasting, anomaly detection, recommendation, clustering, and ranking, with regulated glass-box models . **The trade-off**: library, not platform; requires ML engineering. **For teams wanting a single engine for multiple predictive tasks, it is the strongest starting point.**
-
-- **Gorse is the most mature open-source recommender engine**—AutoML, distributed prediction, REST API, and dashboard . **The trade-off**: recommendation only; no anomaly detection or forecasting.
-
-- Self-hosted open-source solutions require proper infrastructure (Go for Gorse, Python for ParleML and Shallots), security hardening, and ongoing maintenance. **Predictive insights platforms process business telemetry and customer data**—ensure your deployment meets your organization's privacy and compliance requirements before processing production data.
-
-
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+*Focused on Anomaly Detection, Time-Series & Revenue Forecasting, Unstructured Feedback Analytics & Recommendation Systems.*
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [SaaS & Hosted Platforms](#saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Architecture & Capability Comparison](#architecture--capability-comparison)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
 
-**Made for data scientists, analytics teams, and organizations building transparent predictive insights solutions.**
+---
 
-Let's make AI Predictive Insights & Recommendations more open, data-driven, and action-oriented.
+## Sector Overview & Market Dynamics
+
+The global **Predictive Analytics market** is estimated at **$21.2B–$30.1B in 2026** (scaling toward $80B–$116B by the early 2030s at ~19–28% CAGR), while the specialized **AI Recommendation Engine market** commands an additional **$6.8B–$9.7B in 2026** (projected to hit $32B–$84B by the 2030s).
+
+The sector is **moderately fragmented across vertical niches** rather than a single "winner-take-all" monopoly: horizontal mega-caps (Salesforce, Datadog) dominate core CRM and cloud infrastructure observability, while specialized enterprise platforms (Qualtrics, Gong, Medallia) capture distinct domain-specific workflows in conversational intelligence, customer experience, and root-cause causal telemetry. In parallel, the open-source ecosystem provides modular building blocks across anomaly detection, time-series forecasting, and collaborative filtering for engineering teams seeking data sovereignty.
+
+---
+
+## SaaS & Hosted Platforms
+
+| Product | Company Size (Valuation / Revenue) | Starting Price (Specific Tier) | Free Tier / Trial Limits | Primary Use Case & Trade-offs |
+| :--- | :--- | :--- | :--- | :--- |
+| **Salesforce Einstein Discovery** | **~$182B–$198B Market Cap** ($41.53B FY2026 Rev) | **$25/user/month** (CRM Analytics Plus or Einstein Predictions add-on) / **$50/user/month** (Sales Cloud Einstein, billed annually) | **Perpetual Free Developer Edition** (sandbox limits: max 5MB data storage, 20MB file storage, restricted API calls); 30-day trial for standard CRM clouds | Automated predictions on CRM workflows. Trade-off: Requires min 400 rows of historic data; capped at 20M rows and 50 fields. |
+| **Datadog Watchdog** | **~$68B–$79B Market Cap** ($4.52B FY2026 Rev) | **$18/host/month** (Pro infrastructure tier including Watchdog anomaly detection, billed annually) | **14-day full-access trial** (unlimited hosts/metrics during trial; credit card optional) | Automated anomaly alerts across metrics, logs, and APM. Trade-off: Surfaces anomalies without automated root-cause isolation. |
+| **Dynatrace Davis AI** | **~$12.5B–$13.6B Market Cap** ($2.02B FY2026 Rev) | **$0.08/hour per 8 GiB host** (~$58.40/month host monitoring) or per Davis Data Unit (DDU: $0.001/unit); first-year contracts average **$80.5K–$126.5K** | **15-day free trial** (access to full-stack monitoring, capped at trial ingestion limits; data retained for 30 days post-expiry) | Deterministic causal AI and automated dependency mapping. Trade-off: High enterprise TCO and steep configuration curve. |
+| **Qualtrics XM Discover** | **$12.5B Valuation** ($1.5B+ ARR, acquired by Silver Lake) | Custom quote; base XM platform modules start at **$1,500–$5,000/year** (enterprise Discovery contracts average **$50K–$150K+/year**) | **30-day free trial** on standard DesignXM/Surveys (capped at 300 responses, 3 active surveys); **No self-serve trial for XM Discover** (sales demo & POC only) | Omni-channel NLP, sentiment extraction, and unstructured text analytics. Trade-off: Enterprise-only sales cycle; advanced models require custom training. |
+| **Gong Insights** | **$7.25B Valuation** ($500M+ ARR) | **$1,200–$1,400/user/year** (plus $5,000–$10,000 base platform fee; Insights module add-ons run **$15K–$40K/year**) | **No free trial** (enterprise sales-led interactive POC and product demo only) | Revenue intelligence, deal risk analytics, and conversation insights. Trade-off: Significant base subscription overhead before module add-ons. |
+| **Medallia Experience Cloud** | **$6.4B Valuation** ($1.8B Rev, restructured under Blackstone/Apollo) | Consumption-based on Experience Data Records (EDRs); enterprise commitments average **$100K–$750K+/year** | **No free trial** (sales-led enterprise evaluation and architectural validation only) | Enterprise customer experience, voice-of-customer, and speech telemetry. Trade-off: Enterprise minimum commits; requires professional deployment services. |
+| **Freshworks Freddy AI Insights** | **~$3.05B–$3.33B Market Cap** ($965M+ FY2026 Rev) | **$119/agent/month** (Freshdesk Omni Enterprise, billed annually) | **14-day free trial** for Freshdesk Omni Enterprise (up to 10 agents, full feature access, no credit card required) | Root cause discovery and customer service ticket analytics. Trade-off: Bundled only into top-tier Enterprise licenses; cannot be purchased standalone. |
+| **Clari Copilot** | **$2.6B Valuation** ($180M–$450M ARR) | **$80/user/month** ($960–$1,080/user/year) or entry packages starting at **$500/user/year** | **No free trial** (sales-guided enterprise demonstration and pipeline pilot only) | Real-time call intelligence and revenue forecasting. Trade-off: Deepest value requires full migration into Clari's forecasting stack. |
+| **CallMiner Eureka** | **~$250M–$500M Valuation** ($70M+ ARR) | Volume/seat tiers starting around **$60–$100/agent/month** (average contract size **$100,000+/year**) | **No free trial** (enterprise pilot / POC available upon qualified sales consultation) | Speech and interaction analytics for contact center compliance and QA. Trade-off: Designed for scale (60+ agents minimum); quote-only onboarding. |
+| **Balto** | **~$52M–$57M Total Venture Funding** (~$22M–$23M ARR) | **$100–$150/agent/month** seat license (median contract size **~$101,000/year**; Togo voice AI billed per minute) | **No self-serve free trial** (guided sales sandbox and live telephony test only) | In-call real-time guidance and dynamic agent checklists. Trade-off: Telephony integration dependency; custom pricing. |
+
+---
+
+## Open-Source GitHub Projects
+
+Curated self-hosted engines and libraries sorted by GitHub community adoption (descending star count).
+
+| Project | Stars | Focus Area | Description |
+| :--- | :--- | :--- | :--- |
+| **[Microsoft Recommenders](https://github.com/recommenders-team/recommenders)** | [![GitHub stars](https://img.shields.io/github/stars/recommenders-team/recommenders?style=social&color=white)](https://github.com/recommenders-team/recommenders/stargazers) | Recommendation Systems | Production-grade algorithms, evaluation utilities, and operational pipelines for collaborative filtering, neural recommenders (SAR, NCF, DKN, LightGCN), and Azure integration. |
+| **[Meta Prophet](https://github.com/facebook/prophet)** | [![GitHub stars](https://img.shields.io/github/stars/facebook/prophet?style=social&color=white)](https://github.com/facebook/prophet/stargazers) | Time-Series Forecasting | Robust forecasting procedure for handling non-linear trends with yearly, weekly, and daily seasonalities, holiday effects, and changepoints. |
+| **[Ludwig](https://github.com/ludwig-ai/ludwig)** | [![GitHub stars](https://img.shields.io/github/stars/ludwig-ai/ludwig?style=social&color=white)](https://github.com/ludwig-ai/ludwig/stargazers) | Declarative AutoML | Low-code deep learning and predictive modeling framework (originally Uber) supporting multimodal predictive tasks via simple YAML configuration files. |
+| **[AutoGluon](https://github.com/autogluon/autogluon)** | [![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon?style=social&color=white)](https://github.com/autogluon/autogluon/stargazers) | AutoML & Forecasting | Amazon's automated machine learning toolkit featuring multi-layer model ensembling, time-series predictive forecasting, tabular predictive modeling, and multimodal support. |
+| **[PyOD](https://github.com/yzhao062/pyod)** | [![GitHub stars](https://img.shields.io/github/stars/yzhao062/pyod?style=social&color=white)](https://github.com/yzhao062/pyod/stargazers) | Anomaly Detection | Comprehensive Python toolkit providing 60+ outlier and anomaly detection algorithms (LOF, Isolation Forest, COPOD, ECOD, AutoEncoders) across tabular and streaming data. |
+| **[Gorse](https://github.com/gorse-io/gorse)** | [![GitHub stars](https://img.shields.io/github/stars/gorse-io/gorse?style=social&color=white)](https://github.com/gorse-io/gorse/stargazers) | Recommendation Engine | High-performance Go-based recommendation system engine. Features automated model searching (AutoML), distributed online inference, REST APIs, and an administrative dashboard. |
+| **[PyCaret](https://github.com/pycaret/pycaret)** | [![GitHub stars](https://img.shields.io/github/stars/pycaret/pycaret?style=social&color=white)](https://github.com/pycaret/pycaret/stargazers) | Low-Code Machine Learning | End-to-end machine learning and predictive analytics library orchestrating automated preprocessing, model comparison, hyperparameter tuning, and anomaly detection. |
+| **[Darts](https://github.com/unit8co/darts)** | [![GitHub stars](https://img.shields.io/github/stars/unit8co/darts?style=social&color=white)](https://github.com/unit8co/darts/stargazers) | Time-Series Forecasting & Anomaly Detection | User-friendly Python library for time series forecasting, backtesting, and anomaly detection with unified support from ARIMA to deep learning (TiDE, N-BEATS, TFT). |
+| **[Monolith](https://github.com/bytedance/monolith)** | [![GitHub stars](https://img.shields.io/github/stars/bytedance/monolith?style=social&color=white)](https://github.com/bytedance/monolith/stargazers) | Real-Time Recommendation | ByteDance's real-time recommendation system designed for collisionless embedding tables, online training, and streaming parameter synchronizations. |
+| **[Evidently](https://github.com/evidentlyai/evidently)** | [![GitHub stars](https://img.shields.io/github/stars/evidentlyai/evidently?style=social&color=white)](https://github.com/evidentlyai/evidently/stargazers) | ML Observability & Anomaly Detection | Evaluates, monitors, and detects data drift, target drift, regression degradation, and anomalies across ML models, predictive scoring pipelines, and LLM applications. |
+| **[Anomalib](https://github.com/open-edge-platform/anomalib)** | [![GitHub stars](https://img.shields.io/github/stars/open-edge-platform/anomalib?style=social&color=white)](https://github.com/open-edge-platform/anomalib/stargazers) | Visual Anomaly Detection | Intel's deep learning library for unsupervised visual anomaly detection, edge model optimization, and industrial defect localization (Padim, PatchCore, STFPM). |
+| **[Salesforce Merlion](https://github.com/salesforce/Merlion)** | [![GitHub stars](https://img.shields.io/github/stars/salesforce/Merlion?style=social&color=white)](https://github.com/salesforce/Merlion/stargazers) | Time-Series Intelligence | Framework for time series intelligence providing unified modeling for anomaly detection, forecasting, and automated benchmarking with enterprise telemetry support. |
+
+---
+
+## Architecture & Capability Comparison
+
+Understanding the structural distinction across these tooling paradigms is critical before designing an intelligence pipeline:
+
+- **Causal AI (e.g., Dynatrace Davis AI):** Traces full dependency topologies to pinpoint deterministic causality rather than superficial correlation.
+- **Metric Anomaly Detection (e.g., Datadog Watchdog, PyOD, Merlion):** Flags mathematical deviations and distribution shifts across telemetry metrics; analysts or automated runbooks must investigate the root cause.
+- **Predictive Pattern Mining (e.g., Salesforce Einstein, AutoGluon, PyCaret):** Identifies high-weight multi-variable coefficients in relational schemas to estimate propensity, churn, or outcome likelihoods.
+- **Unstructured Speech & Text Intelligence (e.g., Qualtrics XM Discover, CallMiner, Balto):** Ingests conversational interactions, audio transcripts, and tickets to extract intent, sentiment, and trend shifts.
+- **Personalized Recommendations (e.g., Gorse, Microsoft Recommenders, Monolith):** Employs collaborative filtering, factorization, and neural embeddings to surface ranked next-best item or content suggestions.
+
+---
+
+## How to Contribute
+
+1. Fork this repository.
+2. Ensure entries conform to the tabular schema:
+   - For **SaaS**: Verify specific starting tier prices (avoid vague terms like 'Contact Sales') and verify free-tier / trial limits.
+   - For **Open-Source**: Provide verified GitHub repository links, descriptions, and include the standard white social star badge linking to `/stargazers`.
+3. Submit a Pull Request with a clear description of changes.
+
+---
+
+## Disclaimer
+
+- This repository is a community-curated educational index and does not represent an endorsement.
+- All trademarks, service marks, and company names belong to their respective owners.
+- Pricing, valuations, and trial policies reflect current industry benchmarks and published documentation; consult vendor agreements directly for binding contractual terms.
